@@ -6,7 +6,7 @@
 #    By: mberglun <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/11/02 17:10:30 by mberglun          #+#    #+#              #
-#    Updated: 2019/11/05 19:45:16 by mberglun         ###   ########.fr        #
+#    Updated: 2019/11/05 19:47:49 by mberglun         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,13 +17,10 @@ NAME = testlib
 # Directories, library and tests
 SRC_DIR = ../getnextline/
 OBJ_DIR = objs/
-TEST_DIR = ./
 LIB_DIR = ../libft/
 
 # Files, library and tests
 SRC_FILES = get_next_line.c
-TEST_FILES = main.c
-TESTS = $(addprefix $(OBJ_DIR), $(TEST_FILES:.c=.o))
 SRCS = $(addprefix $(SRC_DIR), $(SRC_FILES:.c=.o))
 OBJS = $(addprefix $(OBJ_DIR), $(SRC_FILES:.c=.o))
 MKDIR_P = mkdir -p
