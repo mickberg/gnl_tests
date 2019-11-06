@@ -6,7 +6,7 @@
 /*   By: mberglun <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/05 19:19:30 by mberglun          #+#    #+#             */
-/*   Updated: 2019/11/05 20:00:52 by mberglun         ###   ########.fr       */
+/*   Updated: 2019/11/05 20:38:51 by mikaelber        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,10 @@ int	main(void)
 		return (0);
 	}
 
-	get_next_line(fd, &cline);
-	printf("%s\n", cline);
+	int i = 0;
+	while (get_next_line(fd, &cline))
+	{
+		printf(">%d:%s", i++, cline);
+	}
 	return (0);
 }
