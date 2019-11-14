@@ -6,7 +6,7 @@
 /*   By: mberglun <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/05 19:19:30 by mberglun          #+#    #+#             */
-/*   Updated: 2019/11/13 19:54:35 by mberglun         ###   ########.fr       */
+/*   Updated: 2019/11/14 04:15:45 by mikaelber        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,7 @@ int	main(int argc, char **argv)
 		}
 	}
 
+	cline = NULL;
 	while (get_next_line(fd[0], &cline))
 	{
 		printf("%s\n", cline);
@@ -45,6 +46,18 @@ int	main(int argc, char **argv)
 			get_next_line(fd[1], &cline);
 			printf("%s\n", cline);
 		}
+
+	}
+
+	int i = 0;
+	while (i < fdi)
+	{
+		close(fd[fdi]);
+		++i;
+	}
+
+	while (0)
+	{
 
 	}
 
