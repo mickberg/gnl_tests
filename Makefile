@@ -6,7 +6,7 @@
 #    By: mberglun <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/11/02 17:10:30 by mberglun          #+#    #+#              #
-#    Updated: 2019/11/12 10:12:47 by mikaelber        ###   ########.fr        #
+#    Updated: 2019/11/19 13:37:08 by mikaelber        ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -31,7 +31,7 @@ $(NAME): $(OBJS) main.c
 	$(CC) $(CFLAGS) $(OBJS) main.c -o $(NAME) -I ./ -L../libft/ -lft
 
 $(OBJS): $(OBJ_DIR)%.o : $(SRC_DIR)%.c
-	$(CC) $(CFLAGS) -c $< -o $@ -I $(SRC_DIR)
+	$(CC) $(CFLAGS) -c $< -g -o $@ -I $(SRC_DIR)
 
 clean:
 	-rm -rf $(OBJ_DIR)

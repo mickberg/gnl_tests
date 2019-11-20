@@ -6,7 +6,7 @@
 /*   By: mberglun <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/05 19:19:30 by mberglun          #+#    #+#             */
-/*   Updated: 2019/11/14 04:15:45 by mikaelber        ###   ########.fr       */
+/*   Updated: 2019/11/19 15:09:02 by mikaelber        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,16 +37,15 @@ int	main(int argc, char **argv)
 		}
 	}
 
+	//// WORNG fd test
+	if (get_next_line(42, &cline) != -1)
+		printf("does not handle wrong fd input\n");
+
 	cline = NULL;
-	while (get_next_line(fd[0], &cline))
+	while (get_next_line(fd[0], &cline) > 0)
 	{
 		printf("%s\n", cline);
-		if (fd[1])
-		{
-			get_next_line(fd[1], &cline);
-			printf("%s\n", cline);
-		}
-
+		free(cline);
 	}
 
 	int i = 0;
